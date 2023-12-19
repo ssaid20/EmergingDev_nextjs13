@@ -1,6 +1,10 @@
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import LocalSearchbar from "@/components/shared/search/LocalSearchbar";
+import Filter from "@/components/shared/Filter";
+import { HomePageFilters } from "@/constants/filters";
+import HomeFilters from "@/components/Home/HomeFilters";
+
 export default async function Home() {
  
   return (
@@ -24,13 +28,13 @@ export default async function Home() {
           otherClasses="flex-1"
         />
 
-        {/* <Filter
+        <Filter
           filters={HomePageFilters}
           otherClasses="min-h-[56px] sm:min-w-[170px]"
           containerClasses="hidden max-md:flex"
-        /> */}
+        />
       </div>
-
+      <HomeFilters />
       
 
        
